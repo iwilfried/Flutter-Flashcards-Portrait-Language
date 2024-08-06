@@ -162,10 +162,10 @@ class _GlossariesScreenState extends ConsumerState<GlossariesScreen> {
             );
           } else if (element.tag == 'tooltip') {
             return StyledTextWidgetBuilderTag(
-              (context, attributes) => Tooltip(
+              (context, attributes, textContent) => Tooltip(
                   message: attributes['message'],
                   triggerMode: TooltipTriggerMode.tap,
-                  textStyle: Theme.of(context).textTheme.bodyText2!.copyWith(
+                  textStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: Theme.of(context).brightness == Brightness.dark
                             ? Colors.black
                             : Colors.white,

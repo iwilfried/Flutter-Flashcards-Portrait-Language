@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SlideZero extends ConsumerWidget {
   final Function startLesson;
-  const SlideZero(this.startLesson, {Key? key}) : super(key: key);
+  const SlideZero(this.startLesson, {super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     double width = MediaQuery.of(context).size.width;
@@ -21,7 +21,7 @@ class SlideZero extends ConsumerWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
-                    Theme.of(context).backgroundColor.withOpacity(0.9),
+                    Theme.of(context).colorScheme.surface.withOpacity(0.9),
                     BlendMode.darken),
                 image: AssetImage(isPortrait
                     ? "assets/images/backPortrait.png"
