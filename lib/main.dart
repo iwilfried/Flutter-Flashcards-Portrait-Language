@@ -50,17 +50,20 @@ class MyApp extends ConsumerWidget {
         return supportedLocales.first;
       },
       theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: const Color(0xff333333),
-        backgroundColor: Colors.white,
-        shadowColor: const Color(0xff333333),
-        cardColor: Colors.white,
-
-        /* light theme settings */
-      ),
+          brightness: Brightness.light,
+          primaryColor: const Color(0xff333333),
+          shadowColor: const Color(0xff333333),
+          cardColor: Colors.white,
+          colorScheme: const ColorScheme.light(
+            surface: Colors.white,
+          )
+          /* light theme settings */
+          ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        backgroundColor: Colors.black,
+        colorScheme: const ColorScheme.light(
+          surface: Colors.white,
+        ),
         primaryColor: Colors.white,
         shadowColor: Colors.white24,
         cardColor: Colors.black45,
