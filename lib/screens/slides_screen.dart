@@ -232,7 +232,7 @@ class _MainScreenState extends ConsumerState<SlidesScreen> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 colorFilter: ColorFilter.mode(
-                    Theme.of(context).backgroundColor.withOpacity(0.9),
+                    Theme.of(context).colorScheme.surface.withOpacity(0.9),
                     BlendMode.darken),
                 image: const AssetImage("assets/images/backLandscape.png"),
                 fit: BoxFit.cover)),

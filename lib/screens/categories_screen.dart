@@ -86,7 +86,7 @@ class _CategoriesScreenState extends ConsumerState<CategoriesScreen> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: const Color(0xffF16623),
+                          backgroundColor: const Color(0xffF16623),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0)),
                           padding: const EdgeInsets.all(10.0),
@@ -116,7 +116,7 @@ class _CategoriesScreenState extends ConsumerState<CategoriesScreen> {
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.blue,
+                          backgroundColor: Colors.blue,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20.0)),
                           padding: const EdgeInsets.symmetric(
@@ -171,11 +171,13 @@ class _CategoriesScreenState extends ConsumerState<CategoriesScreen> {
                             launch(link!);
                           },
                           style: GoogleFonts.roboto(
-                              textStyle: const TextStyle(
-                                  fontFamily: "RobotoSerif",
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 15,
-                                  color: Color(0xffc16464))),
+                            textStyle: const TextStyle(
+                              fontFamily: "RobotoSerif",
+                              fontWeight: FontWeight.normal,
+                              fontSize: 15,
+                              color: Color(0xffc16464),
+                            ),
+                          ),
                         )
                       },
                     ),
