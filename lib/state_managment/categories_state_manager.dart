@@ -8,13 +8,13 @@ import 'package:collection/collection.dart';
 
 final categoriesStateManagerProvider =
     StateNotifierProvider<categoriesListStateManager, List<Category>>((ref) {
-  return categoriesListStateManager(ref.read);
+  return categoriesListStateManager(ref);
 });
 
 class categoriesListStateManager extends StateNotifier<List<Category>> {
-  categoriesListStateManager(this.read, [state]) : super(state ?? []);
+  categoriesListStateManager(this.ref, [state]) : super(state ?? []);
 
-  final Reader read;
+  final Ref ref;
 
   void init(List<Category> categories) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();

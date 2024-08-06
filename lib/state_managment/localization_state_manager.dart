@@ -4,15 +4,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final localizationStateManagerProvider =
     StateNotifierProvider<LocalizationStateManager, Locale?>((ref) {
-  return LocalizationStateManager(ref.read);
+  return LocalizationStateManager(ref);
 });
 
 class LocalizationStateManager extends StateNotifier<Locale?> {
-  LocalizationStateManager(this.read, [state]) : super(state) {
+  LocalizationStateManager(this.ref, [state]) : super(state) {
     _init();
   }
 
-  final Reader read;
+  final Ref ref;
 
   void _init() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
