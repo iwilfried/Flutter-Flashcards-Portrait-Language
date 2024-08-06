@@ -1,0 +1,14 @@
+workflows:
+  web_workflow:
+    name: Build and test web app
+    environment:
+      flutter: stable
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build for web
+        script: |
+          flutter build web
+    artifacts:
+      - build/web
