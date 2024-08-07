@@ -61,7 +61,7 @@ class MyApp extends ConsumerWidget {
           ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        colorScheme: const ColorScheme.light(
+        colorScheme: const ColorScheme.dark(
           surface: Colors.white,
         ),
         primaryColor: Colors.white,
